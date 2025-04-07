@@ -1,4 +1,4 @@
-package exception;
+package hw3.ex;
 
 public class FileWriteException extends Exception{
     public FileWriteException(String message){

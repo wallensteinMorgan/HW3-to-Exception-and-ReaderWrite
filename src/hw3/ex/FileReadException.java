@@ -1,4 +1,4 @@
-package exception;
+package hw3.ex;
 
 public class FileReadException extends Exception{
     public FileReadException(String message){

@@ -1,5 +1,7 @@
-import exception.FileReadException;
-import exception.FileWriteException;
+package hw3;
+
+import hw3.ex.FileReadException;
+import hw3.ex.FileWriteException;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -9,7 +11,7 @@ import java.util.List;
 
 public class FileService {
     private static final String FILE_PATH = "test.txt";
-    public static void writeDataToFile(BufferedReader reader) throws FileWriteException{
+    public static void writeDataToFile(BufferedReader reader) throws FileWriteException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
             System.out.println("Введите данные для записи в файл (введите 'exit' для завершения):");
             List<String> lines = new ArrayList<>();
@@ -30,7 +32,7 @@ public class FileService {
         }
     }
 
-    public void readDataFromFile() throws FileReadException{
+    public void readDataFromFile() throws FileReadException {
         try {
             if(!Files.exists(Paths.get(FILE_PATH))) {
                 throw new  FileReadException("Файл не существует или пуст.");

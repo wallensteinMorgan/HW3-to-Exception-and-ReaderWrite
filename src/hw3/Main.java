@@ -1,5 +1,7 @@
-import exception.FileReadException;
-import exception.FileWriteException;
+package hw3;
+
+import hw3.ex.FileReadException;
+import hw3.ex.FileWriteException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
